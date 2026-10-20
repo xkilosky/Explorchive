@@ -318,6 +318,10 @@ async function runAutopilot() {
   state.organize.plan = plan;
   toast(`Auto-organize is on — moving ${plan.length} ${plural(plan.length, "file", "files")}`, "info", "Autopilot");
   await applyOrganizePlan();
+  // Autopilot has its own settings; leave the manual organize page as the user left it.
+  state.organize.scheme = previous.scheme;
+  state.organize.includeSubfolders = previous.include;
+  render();
 }
 
 async function scanSource(source) {

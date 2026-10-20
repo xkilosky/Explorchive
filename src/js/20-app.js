@@ -409,7 +409,7 @@ function dashboardViewHTML() {
               <div class="kv-row"><span class="k">On this device (indexed)</span><span class="v">${fmtBytes(size)}</span></div>
               <div class="kv-row"><span class="k">Duplicates, reclaimable</span><span class="v">${dupes.groups ? fmtBytes(dupes.reclaimable) : "Scan needed"}</span></div>
               <div class="kv-row"><span class="k">Free cloud tiers, claimable</span><span class="v">${claimableTotal()} GB</span></div>
-              <div class="kv-row"><span class="k">Local browser quota</span><span class="v" id="local-quota">${state.localQuota ? fmtBytes(state.localQuota.quota) : "Detecting…"}</span></div>
+              <div class="kv-row"><span class="k">Local browser quota</span><span class="v" id="local-quota">${state.localQuota && state.localQuota.quota ? fmtBytes(state.localQuota.quota) + " total" : "Detecting…"}</span></div>
               <div class="kv-row"><span class="k">Cloud vault free space</span><span class="v">${cloudConfigured() ? cloudUsageLabel() : "Not set up"}</span></div>
             </div>
             <div class="row wrap" style="margin-top:14px">
