@@ -1,0 +1,16 @@
+{
+  "name": "explorchive",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Explorchive — a local-first, downloadable file manager with a Tokyo Sky palette.",
+  "scripts": {
+    "build": "python3 build.py",
+    "serve": "python3 -m http.server 8000 --directory dist",
+    "test": "node tests/smoke.mjs && node tests/filesystem.mjs",
+    "test:ui": "node tests/smoke.mjs",
+    "test:fs": "node tests/filesystem.mjs"
+  },
+  "devDependencies": {
+    "jsdom": "^30.1.3"
+  }
+}

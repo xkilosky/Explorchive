@@ -1,0 +1,10 @@
+# dependencies
+node_modules/
+
+# build output (the downloadable single file is committed at the repo root)
+dist/
+
+# test/download artifacts
+*.log
+.DS_Store
+tmp/
